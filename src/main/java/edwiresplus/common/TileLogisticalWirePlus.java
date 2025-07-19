@@ -10,7 +10,6 @@ import voltaic.prefab.tile.components.type.ComponentTickable;
 import voltaic.prefab.utilities.BlockEntityUtils;
 
 public class TileLogisticalWirePlus extends TileWire {
-
     public boolean isPowered = false;
 
     public TileLogisticalWirePlus(BlockPos pos, BlockState state) {

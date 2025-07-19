@@ -1,11 +1,11 @@
 package edwiresplus.common;
 
-import electrodynamics.common.block.connect.BlockLogisticalWire;
 import electrodynamics.common.block.connect.BlockWire;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.BlockGetter;
 import voltaic.api.network.cable.type.IWire;
 import com.mojang.serialization.MapCodec;
 import electrodynamics.common.block.subtype.SubtypeWire;
-import electrodynamics.common.tile.electricitygrid.TileLogisticalWire;
 import java.util.HashSet;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -72,5 +72,25 @@ public class BlockLogisticalWirePlus extends BlockWire {
             }, new Block[]{block}));
         }
     }
+
+    @Override
+    public boolean isSignalSource(BlockState state) {
+        return wire.getWireClass() == SubtypeWire.WireClass.LOGISTICAL;
+    }
+    @Override
+    public int getSignal(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+        BlockEntity tile = level.getBlockEntity(pos);
+        if ((tile instanceof TileLogisticalWirePlus wire) && wire.isPowered) {
+            return 15;
+        }
+        return 0;
+    }
+    @Override
+    public int getDirectSignal(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+        return getSignal(state, level, pos, direction);
+    }
+
+
+
 }
 
