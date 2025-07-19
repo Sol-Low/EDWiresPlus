@@ -46,7 +46,7 @@ public class BlockLogisticalWirePlus extends BlockWire {
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new TileLogisticalWire(pos, state);
+        return new TileLogisticalWirePlus(pos, state);
     }
 
     protected MapCodec<? extends BaseEntityBlock> codec() {
@@ -67,7 +67,7 @@ public class BlockLogisticalWirePlus extends BlockWire {
                 } else if (tintIndex != 1) {
                     return -1;
                 } else {
-                    return (Boolean)state.getValue(VoltaicBlockStates.LIT) ? BlockLogisticalWire.REDSTONE_ON.color() : BlockLogisticalWire.REDSTONE_OFF.color();
+                    return (Boolean)state.getValue(VoltaicBlockStates.LIT) ? BlockLogisticalWirePlus.REDSTONE_ON.color() : BlockLogisticalWirePlus.REDSTONE_OFF.color();
                 }
             }, new Block[]{block}));
         }
