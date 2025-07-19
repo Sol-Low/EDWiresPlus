@@ -6,16 +6,14 @@ import edwiresplus.datagen.client.EDWiresPlusBlockModelsProvider;
 import edwiresplus.datagen.client.EDWiresPlusBlockStateProvider;
 import edwiresplus.datagen.client.EDWiresPlusItemModelsProvider;
 import edwiresplus.datagen.client.EDWiresPlusLangKeyProvider;
+import edwiresplus.datagen.server.recipe.EDWiresPlusRecipeProvider;
 import edwiresplus.datagen.server.tags.EDWiresPlusTagsProvider;
 import electrodynamics.common.block.subtype.SubtypeWire;
-import electrodynamics.datagen.server.tags.types.ElectrodynamicsItemTagsProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import voltaic.api.network.cable.type.IWire;
@@ -25,7 +23,7 @@ import java.util.*;
 import java.util.concurrent.CompletableFuture;
 
 @EventBusSubscriber(modid = EDWiresPlus.ID, bus = EventBusSubscriber.Bus.MOD)
-public class DatageneratorsPlus {
+public class DataGeneratorsPlus {
 
     public static final HashMap<IWire.IWireClass, HashSet<SubtypeWirePlus>> WIRES = new HashMap<>();
 
@@ -77,6 +75,7 @@ public class DatageneratorsPlus {
         if (event.includeServer()) {
 
             EDWiresPlusTagsProvider.addTagProviders(generator, output, lookupProvider, helper);
+            generator.addProvider(true, new EDWiresPlusRecipeProvider(output,lookupProvider));
         }
         if (event.includeClient()){
             generator.addProvider(true, new EDWiresPlusBlockStateProvider(output,helper));

@@ -1,8 +1,8 @@
 package edwiresplus.registers;
 
 import edwiresplus.EDWiresPlus;
+import edwiresplus.common.BlockLogisticalWirePlus;
 import edwiresplus.common.SubtypeWirePlus;
-import electrodynamics.common.block.connect.BlockLogisticalWire;
 import electrodynamics.common.block.connect.BlockWire;
 import electrodynamics.common.block.subtype.SubtypeWire;
 import net.minecraft.core.registries.Registries;
@@ -16,10 +16,10 @@ public class EDWiresPlusBlocks {
 
     public static final BulkDeferredHolder<Block, BlockWire, SubtypeWirePlus> BLOCKS_WIRE = new BulkDeferredHolder<>(SubtypeWirePlus.values(), subtype -> {
 // Need to find a way to get BlockLogisticalWire to accept IWire based input
-//        if(subtype.getWireClass() == SubtypeWire.WireClass.LOGISTICAL) {
-//
-//           return BLOCKS.register(subtype.tag(), () -> new BlockLogisticalWire(subtype));
-//        }
+        if(subtype.getWireClass() == SubtypeWire.WireClass.LOGISTICAL) {
+
+           return BLOCKS.register(subtype.tag(), () -> new BlockLogisticalWirePlus(subtype));
+        }
         return BLOCKS.register(subtype.tag(), () -> new BlockWire(subtype));
     });
 }
