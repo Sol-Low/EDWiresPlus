@@ -42,7 +42,7 @@ public class BlockLogisticalWirePlus extends BlockWire {
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState superState = super.getStateForPlacement(context);
-        return (BlockState)superState.setValue(VoltaicBlockStates.LIT, false);
+        return (BlockState) superState.setValue(VoltaicBlockStates.LIT, false);
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
@@ -55,7 +55,7 @@ public class BlockLogisticalWirePlus extends BlockWire {
 
     @EventBusSubscriber(
             value = {Dist.CLIENT},
-            modid = "electrodynamics",
+            modid = "edwiresplus",
             bus = Bus.MOD
     )
     private static class ColorHandler {

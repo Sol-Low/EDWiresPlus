@@ -37,8 +37,12 @@ public class EDWiresPlusBlockStateProvider extends BaseBlockstateProvider {
         }
         for(SubtypeWirePlus wire : DataGeneratorsPlus.getWires(WireMaterial.values(), InsulationMaterial.WOOL, WireClass.LOGISTICAL, SubtypeWirePlus.WireColorPlus.values())) {
             wire(EDWiresPlusBlocks.BLOCKS_WIRE.getValue(wire),
-                    models().withExistingParent(name + wire.tag() + "_none", modLoc(parent + "logisticswire_none")).texture("conductor", blockLoc(texture+ "logisticswire" + wire.getWireMaterial().toString())).texture("insulation", blockLoc(texture + "logisticswireinsulation_center")).texture("particle", "#insulation").texture("redstone", blockLoc(texture + "logisticswireredstone_center")).renderType("cutout"), //
-                    models().withExistingParent(name + wire.tag() + "_side", modLoc(parent + "logisticswire_side")).texture("insulation", blockLoc(texture + "logisticswireinsulation_side")).texture("particle", "#insulation").texture("redstone", blockLoc(texture + "logisticswireredstone_side")).renderType("cutout"), //
+                    models().withExistingParent(name + wire.tag() + "_none", modLoc(parent + "logisticswire_none")).texture("conductor", blockLoc(texture + "logisticswire" + wire.getWireMaterial().toString())).texture("insulation", blockLoc(texture + "logisticswireinsulation_center")).texture("particle", "#insulation").texture("redstone", blockLoc(texture + "logisticswireredstone_center")).renderType("cutout"), //
+                    models().withExistingParent(name + wire.tag() + "_side", modLoc(parent + "logisticswire_side"))
+                            .texture("insulation", blockLoc(texture + "logisticswireinsulation_side"))
+                            .texture("particle", "#insulation")
+                            .texture("redstone", blockLoc(texture + "logisticswireredstone_side"))
+                            .renderType("cutout"), //
                     false);
         }
         for(SubtypeWirePlus wire : DataGeneratorsPlus.getWires(WireMaterial.values(), InsulationMaterial.CERAMIC, WireClass.CERAMIC, SubtypeWirePlus.WireColorPlus.values())) {

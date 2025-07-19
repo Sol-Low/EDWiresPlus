@@ -271,7 +271,6 @@ public enum SubtypeWirePlus implements ISubtype, IWire {
     @Override public @Nullable TagKey<Item> getItemTag() {return itemTag;}
     @Override public boolean isDefaultColor() {return false;}
 
-
     //Extended colors for the remaining vanilla dyes, this is where the headache starts...
     public enum WireColorPlus implements IWireColor {
         GRAY(71, 79, 82, 255, Tags.Items.DYES_GRAY),
