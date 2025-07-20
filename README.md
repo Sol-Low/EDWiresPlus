@@ -1,25 +1,32 @@
+# EDWiresPlus
 
-Installation information
-=======
+**EDWiresPlus** is an add-on mod for [Electrodynamics](https://www.curseforge.com/minecraft/mc-mods/electrodynamics) (by Sebastian Siljuholtet Johansen), designed for Minecraft 1.21.1 using NeoForge.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+This mod introduces additional logistical wire types and enhancements to Electrodynamics' redstone-capable wiring system.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+---
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## 🔧 Features
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+- Addition of the remaining vanilla dye colors to be used in your Electrodynamics power grids!
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+---
+
+## ⚖️ License & Credits
+
+This mod builds upon the **Electrodynamics** mod by **Sebastian Siljuholtet Johansen**.  
+Please go checkout their work, it's super cool!
+
+Original mod: https://www.curseforge.com/minecraft/mc-mods/electrodynamics
+
+
+This mod is distributed under the terms of the **AURILISDEV License** (see [`LICENSE.txt`](./LICENSE.txt)).  
+Redistribution and modification are allowed **with proper credit and a link to the original project**.
+
+---
+
+## 📜 Credits
+
+- **Sebastian Siljuholtet Johansen** — original author of Electrodynamics
+- **Sol-Low** — author of EDWiresPlus
+
