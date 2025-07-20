@@ -1,8 +1,4 @@
 # EDWiresPlus
-Reference-style:
-![alt text][logo]
-
-[logo]: https://github.com/Sol-Low/EDWiresPlus/src/main/resources/EDWP.png
 
 **EDWiresPlus** is an add-on mod for [Electrodynamics](https://www.curseforge.com/minecraft/mc-mods/electrodynamics) (by Sebastian Siljuholtet Johansen), designed for Minecraft 1.21.1 using NeoForge.
 
