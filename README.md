@@ -2,7 +2,7 @@
 
 **EDWiresPlus** is an add-on mod for [Electrodynamics](https://www.curseforge.com/minecraft/mc-mods/electrodynamics) (by Sebastian Siljuholtet Johansen), designed for Minecraft 1.21.1 using NeoForge.
 
-This mod introduces additional logistical wire types and enhancements to Electrodynamics' redstone-capable wiring system.
+This mod introduces additional wire colors that function exactly like the existing ones in Electrodynamics.
 
 ---
 
